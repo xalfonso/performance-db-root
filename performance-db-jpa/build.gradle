@@ -1,0 +1,15 @@
+plugins {
+    id 'org.springframework.boot' version '2.1.2.RELEASE'
+    id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+dependencies {
+    implementation project(':performance-db-client')
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa'
+    compileOnly group: 'org.projectlombok', name: 'lombok'
+    runtimeOnly 'mysql:mysql-connector-java'
+    testImplementation group: 'junit', name: 'junit'
+}
+

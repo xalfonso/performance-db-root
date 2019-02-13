@@ -1,0 +1,17 @@
+logging:
+  level:
+    ec.com.kruger.performance.db: debug
+---
+spring:
+  thread:
+    maxPoolSize: 8
+    corePoolSize: 4
+---
+spring:
+  profiles: orientdb, default
+  main.allow-bean-definition-overriding: true
+  data:
+    orient:
+      url: remote:10.200.101.223:2424/performancedb
+      username: root
+      password: root

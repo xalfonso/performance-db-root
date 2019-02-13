@@ -1,0 +1,6 @@
+rootProject.name = 'performance-db-root'
+include 'performance-db-client'
+include 'performance-db-jpa'
+include 'performance-db-mongo'
+include 'performance-db-orientdb'
+

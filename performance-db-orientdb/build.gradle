@@ -1,0 +1,17 @@
+plugins {
+    id 'org.springframework.boot' version '2.1.2.RELEASE'
+    id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+dependencies {
+    compile project(':performance-db-client')
+    implementation group: 'org.springframework.boot', name: 'spring-boot-orientdb-autoconfigure', version: '1.0.0-SNAPSHOT'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter'
+    compile group: 'org.springframework', name: 'spring-beans'
+    
+    implementation group: 'org.aspectj', name: 'aspectjweaver'
+    compileOnly group: 'org.projectlombok', name: 'lombok'
+    testImplementation group: 'junit', name: 'junit'
+}
+

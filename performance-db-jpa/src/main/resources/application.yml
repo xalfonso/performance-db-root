@@ -1,0 +1,27 @@
+logging:
+  level:
+    ec.com.kruger.performance.db.jpa: debug
+---
+spring:
+  thread:
+    maxPoolSize: 8
+    corePoolSize: 4
+---
+spring:
+  profiles: mongodb, default
+  data:
+    jpa:
+      repositories:
+        enabled: true
+  datasource:
+    url: jdbc:mysql://100.200.101.223:3306/performanceDB
+    username: root
+    password:
+    driverClassName: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddlAuto: create-drop
+    show-sql: true
+    properties:
+      format_sql: true
+      #dialect:

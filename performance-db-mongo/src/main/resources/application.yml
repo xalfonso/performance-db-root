@@ -1,0 +1,16 @@
+logging:
+  level:
+    ec.com.kruger.performance.db.mongo: debug
+---
+spring:
+  thread:
+    maxPoolSize: 8
+    corePoolSize: 4
+---
+spring:
+  profiles: mongodb, default
+  data:
+    mongodb:
+      host: 10.200.101.223
+      port: 27017
+      database: performancedb
